@@ -1,49 +1,50 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1 class="text-4xl text-center mt-12 font-bold">Velkommen <span class="text-gradient">Astro</span></h1>
-		
-		<ul class="space-y-4 mt-12">
-			<Card
-				href=""
-				title="Skriblerier"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href=""
-				title="Vind Visuals"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href=""
-				title="Vind Consulting"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-		</ul>
-	</main>
+  <main>
+    <h1 class="text-4xl text-center mt-12 font-bold">
+      Velkommen <span class="text-gradient">Astro</span>
+    </h1>
+
+    <ul class="space-y-4 mt-12">
+      <Card
+        href=""
+        title="Coding"
+        body="Learn how Astro works and explore the official API docs."
+      />
+      <Card
+        href=""
+        title="Photography"
+        body="Supercharge your project with new frameworks and libraries."
+      />
+      <Card
+        href=""
+        title="Other"
+        body="Explore a galaxy of community-built starter themes."
+      />
+    </ul>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
 
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
 </style>
