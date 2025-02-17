@@ -1,3 +1,4 @@
+import Analytics from '@vercel/analytics/astro'
 import type { FC, ReactNode } from 'react';
 import "../styles/global.css";
 
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const Layout: FC<Props> = ({ title, children }) => {
+  <Analytics/>
   return (
     <html lang="en">
       <head>
