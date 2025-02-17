@@ -1,0 +1,49 @@
+---
+// import "../styles/global.css";
+import Layout from "../layouts/Layout.tsx";
+import { getResourcePages, getUsers } from "../pages/api/notion";
+const response = await getResourcePages();
+const notionData = await response.json();
+// console.log(notionData[0].properties.Name.title);
+notionData.forEach((page: any) => {
+  console.log(page.properties.Name.title[0].text);
+});
+---
+
+<Layout title="Dev">
+  <main class="my-24">
+    <h1 class="text-4xl text-center mt-12 font-bold">Dev central</h1>
+    <p class="text-lg">
+      Do you want me to draw up a architecture for your project? Get in touch!
+    </p>
+
+    <!-- <ul class="space-y-4 mt-12">
+      {notionData.results.map((user: any) => <li>{user.name}</li>)}
+    </ul> -->
+    <ul class="space-y-4 mt-12">
+      {
+        notionData.map((page: any, index: number) => (
+          <li class="text-lg">
+            <a href={page.url} class="text-blue-400 hover:text-blue-300">
+              {index + 1}.{" "}
+              {page.properties.Name?.title[0]?.plain_text || "Untitled"}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</Layout>
+
+<!-- <script define:vars={{ notionData }}>
+  // This will log in the browser console
+  console.log(
+    "Notion Data:",
+    JSON.parse(
+      JSON.stringify(
+        // @ts-ignore
+        { notionData }
+      )
+    )
+  );
+</script> -->

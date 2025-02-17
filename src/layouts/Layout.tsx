@@ -1,4 +1,5 @@
 import type { FC, ReactNode } from 'react';
+import "../styles/global.css";
 
 interface Props {
   title: string;
