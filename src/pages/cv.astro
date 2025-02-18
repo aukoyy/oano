@@ -1,9 +1,21 @@
 ---
 import Layout from "../layouts/Layout.tsx";
+import ProjectItem from "../components/ProjectItem";
+import type { ProjectItemProps } from "../types/cv";
+import { projects } from "../content/projects";
+console.log(projects);
 ---
 
 <Layout title="CV">
   <main>
-    <h1 class="text-4xl text-center mt-48 font-bold">My CV</h1>
+    <h1 class="text-4xl text-center mt-24 font-bold">My CV</h1>
+    <h2 class="text-2xl">Projects</h2>
+    <ul class="space-y-2 mt-4">
+      {
+        projects.map((project: ProjectItemProps) => (
+          <ProjectItem {...project} />
+        ))
+      }
+    </ul>
   </main>
 </Layout>

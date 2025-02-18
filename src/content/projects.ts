@@ -1,6 +1,6 @@
-import type { ProjectProps } from "../types/cv";
+import type { ProjectItemProps } from "../types/cv";
 
-const projects: ProjectProps[] = [
+export const projects: ProjectItemProps[] = [
   {
     title: "AWS Platform Team",
     startMonth: "Aug 2024",

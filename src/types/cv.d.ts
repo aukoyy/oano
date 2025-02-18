@@ -1,4 +1,4 @@
-export interface ExperienceProps {
+export interface ExperienceItemProps {
   title: string;
   organization: string;
   location?: string;
@@ -12,7 +12,7 @@ export interface ExperienceProps {
   url?: string;
 }
 
-export interface ProjectProps {
+export interface ProjectItemProps {
   title: string;
   startMonth: string;
   endMonth?: string;
@@ -23,7 +23,7 @@ export interface ProjectProps {
   image?: string;
 }
 
-export interface CertificationProps {
+export interface CertificationItemProps {
   title: string;
   organization: string;
   issueDate: string;
