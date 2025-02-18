@@ -19,6 +19,19 @@ const Layout: FC<Props> = ({ title, children }) => {
         <title>{title}</title>
       </head>
       <body className='max-w-6xl mx-auto px-4 bg-stone-800 text-white'>
+        <nav className="py-4">
+          <ul className="flex space-x-6 justify-end">
+            <li>
+              <a href="/" className="hover:text-stone-300">Home</a>
+            </li>
+            <li>
+              <a href="/dev" className="hover:text-stone-300">Dev</a>
+            </li>
+            <li>
+              <a href="/cv" className="hover:text-stone-300">CV</a>
+            </li>
+          </ul>
+        </nav>
         {children}
       </body> 
     </html>
